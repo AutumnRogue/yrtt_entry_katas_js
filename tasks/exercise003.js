@@ -21,10 +21,15 @@
 // Explanation:
 // The first element 80 is the total weight of team 1, and the second element 0 is the total weight of team 2.
 
-function rowWeights(array){
-    // Your code here!
+function rowWeights(array) {
+  let evenTeam = 0;
+  let oddTeam = 0;
+  array.forEach((x,i) =>
+    i === 0 || i % 2 === 0 ? (evenTeam += array[i]) : (oddTeam += array[i])
+  );
+  return [evenTeam, oddTeam];
 }
 
 module.exports = {
-    rowWeights
+  rowWeights,
 };
