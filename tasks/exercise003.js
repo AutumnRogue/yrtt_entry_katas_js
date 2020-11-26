@@ -25,7 +25,7 @@ function rowWeights(array) {
   let evenTeam = 0;
   let oddTeam = 0;
   array.forEach((x,i) =>
-    i === 0 || i % 2 === 0 ? (evenTeam += array[i]) : (oddTeam += array[i])
+    i === 0 || i % 2 === 0 ? (evenTeam += x) : (oddTeam += x)
   );
   return [evenTeam, oddTeam];
 }
